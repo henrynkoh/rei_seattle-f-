@@ -5,6 +5,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// Metadata must be exported from server component (not from client components)
 export const metadata: Metadata = {
   title: "Pellego - Real Estate Investment Platform",
   description: "Analyze and discover real estate investment opportunities",

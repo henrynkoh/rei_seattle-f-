@@ -1,24 +1,40 @@
 "use client";
-import React from "react";
-import dynamic from "next/dynamic";
 
-// Dynamic imports for client components
-const Header = dynamic(() => import("./Header"), { ssr: false });
-const HeroSection = dynamic(() => import("./HeroSection"), { ssr: false });
-const InvestorBrokerageSection = dynamic(() => import("./InvestorBrokerageSection"), { ssr: false });
-const FreeSoftwareSection = dynamic(() => import("./FreeSoftwareSection"), { ssr: false });
-const Footer = dynamic(() => import("./Footer"), { ssr: false });
-const ChatButton = dynamic(() => import("./ChatButton"), { ssr: false });
+import React from "react";
+import Header from "./Header";
+import HeroSection from "./HeroSection";
+import InvestorBrokerageSection from "./InvestorBrokerageSection";
+import FreeSoftwareSection from "./FreeSoftwareSection";
+import Footer from "./Footer";
+import ChatButton from "./ChatButton";
+import ErrorBoundary from "./ErrorBoundary";
 
 const PellegoLandingPage: React.FC = () => {
   return (
     <main className="flex flex-col bg-white min-h-screen">
-      <Header />
-      <HeroSection />
-      <InvestorBrokerageSection />
-      <FreeSoftwareSection />
-      <Footer />
-      <ChatButton />
+      <ErrorBoundary>
+        <Header />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <HeroSection />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <InvestorBrokerageSection />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <FreeSoftwareSection />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <Footer />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <ChatButton />
+      </ErrorBoundary>
     </main>
   );
 };
