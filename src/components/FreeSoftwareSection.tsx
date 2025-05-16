@@ -125,7 +125,7 @@ const FreeSoftwareSection: React.FC = () => {
               <div className="md:w-1/2 mb-6 md:mb-0 md:pr-8">
                 <div className="relative h-48 w-full rounded-lg overflow-hidden">
                   <Image 
-                    src="https://images.unsplash.com/photo-1554469384-e58fac937c33?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" 
+                    src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" 
                     alt="Seattle real estate analytics dashboard"
                     fill
                     style={{ objectFit: 'cover' }}

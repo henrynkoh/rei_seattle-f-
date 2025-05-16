@@ -45,7 +45,7 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <Link href="/" className="flex items-center">
           <span className={`text-2xl font-bold ${isScrolled ? "text-blue-600" : "text-white"} transition-colors duration-300`}>
-            PELLEGO
+            SEATTLEPULSE
           </span>
           <span className={`ml-2 text-sm ${isScrolled ? "text-gray-500" : "text-gray-300"} transition-colors duration-300`}>
             Real Estate Analytics

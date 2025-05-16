@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pellego - Real Estate Investment Platform",
+  title: "SeattlePulse - Real Estate Investment Platform",
   description: "Analyze and discover real estate investment opportunities",
 };
 

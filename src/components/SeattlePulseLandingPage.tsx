@@ -1,71 +1,35 @@
 "use client";
-import React, { Suspense } from "react";
-import dynamic from "next/dynamic";
-
-// Import error boundary
-const ErrorBoundary = dynamic(() => import("./ErrorBoundary"), { ssr: false });
-
-// Dynamic imports with improved error handling and loading states
-const Header = dynamic(() => import("./Header"), { 
-  ssr: false,
-  loading: () => <div className="h-[51px] bg-gray-50"></div>
-});
-
-const HeroSection = dynamic(() => import("./HeroSection"), { 
-  ssr: false,
-  loading: () => <div className="min-h-[300px] bg-gray-50"></div>
-});
-
-const InvestorBrokerageSection = dynamic(() => import("./InvestorBrokerageSection"), { 
-  ssr: false,
-  loading: () => <div className="min-h-[200px] bg-gray-50"></div>
-});
-
-const FreeSoftwareSection = dynamic(() => import("./FreeSoftwareSection"), { 
-  ssr: false,
-  loading: () => <div className="min-h-[200px] bg-gray-50"></div>
-});
-
-const Footer = dynamic(() => import("./Footer"), { 
-  ssr: false,
-  loading: () => <div className="min-h-[100px] bg-gray-50"></div>
-});
-
-const ChatButton = dynamic(() => import("./ChatButton"), { 
-  ssr: false,
-  loading: () => <div></div>
-});
-
-const ComponentWrapper = ({ children }: { children: React.ReactNode }) => (
-  <ErrorBoundary>
-    <Suspense fallback={<div className="min-h-[100px] flex items-center justify-center bg-gray-50">Loading...</div>}>
-      {children}
-    </Suspense>
-  </ErrorBoundary>
-);
+import React from "react";
+import Header from "./Header";
+import HeroSection from "./HeroSection";
+import InvestorBrokerageSection from "./InvestorBrokerageSection";
+import FreeSoftwareSection from "./FreeSoftwareSection";
+import Footer from "./Footer";
+import ChatButton from "./ChatButton";
+import ErrorBoundary from "./ErrorBoundary";
 
 const SeattlePulseLandingPage: React.FC = () => {
   return (
     <main className="flex flex-col bg-white min-h-screen">
-      <ComponentWrapper>
+      <ErrorBoundary>
         <Header />
-      </ComponentWrapper>
+      </ErrorBoundary>
       
-      <ComponentWrapper>
+      <ErrorBoundary>
         <HeroSection />
-      </ComponentWrapper>
+      </ErrorBoundary>
       
-      <ComponentWrapper>
+      <ErrorBoundary>
         <InvestorBrokerageSection />
-      </ComponentWrapper>
+      </ErrorBoundary>
       
-      <ComponentWrapper>
+      <ErrorBoundary>
         <FreeSoftwareSection />
-      </ComponentWrapper>
+      </ErrorBoundary>
       
-      <ComponentWrapper>
+      <ErrorBoundary>
         <Footer />
-      </ComponentWrapper>
+      </ErrorBoundary>
       
       <ErrorBoundary>
         <ChatButton />

@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
-            <h3 className="text-xl font-bold mb-5 text-white">Pellego</h3>
+            <h3 className="text-xl font-bold mb-5 text-white">SeattlePulse</h3>
             <p className="text-gray-400 mb-6">
               Real estate investment research and analytics for the Greater Seattle area.
               Powered by NWMLS data with comprehensive market intelligence.
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <EmailIcon />
-                <span>info@pellego.com</span>
+                <span>info@seattlepulse.com</span>
               </li>
               <li className="flex items-center space-x-3">
                 <PhoneIcon />
@@ -92,7 +92,7 @@ const Footer: React.FC = () => {
         <div className="mt-16 pt-8 border-t border-gray-700/50">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {new Date().getFullYear()} Pellego. All rights reserved.
+              &copy; {new Date().getFullYear()} SeattlePulse. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</Link>
